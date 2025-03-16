@@ -1,0 +1,120 @@
+/* 
+Note: The following images need to be added to the assets/images directory:
+1. logo.png - SPMB Disdik Jabar logo
+2. chat-bot.png - Chat bot icon
+3. background-pattern.png - Background pattern image
+*/
+
+/* Custom Properties */
+:root {
+    --color-primary: #0066CC;
+    --color-secondary: #00A859;
+    --color-light-blue: #87CEEB;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Background Pattern */
+.bg-pattern {
+    background-color: var(--color-light-blue);
+    background-image: radial-gradient(
+        circle at 50% 50%,
+        rgba(255, 255, 255, 0.1) 0%,
+        transparent 100%
+    );
+    background-size: 30px 30px;
+}
+
+/* Navigation */
+.nav-logo {
+    height: 48px;
+    width: auto;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.cta-button {
+    background-color: #FFD700;
+    color: var(--color-primary);
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+/* Chat Bot Widget */
+.chat-widget {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 50;
+    cursor: pointer;
+}
+
+.chat-widget img {
+    width: 48px;
+    height: 48px;
+}
+
+.chat-bubble {
+    position: absolute;
+    top: -40px;
+    right: -10px;
+    background: white;
+    padding: 0.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+    background: white;
+    padding: 2rem 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: var(--color-primary);
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--color-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1.125rem;
+    }
+    
+    .cta-button {
+        padding: 0.875rem 1.75rem;
+    }
+}
