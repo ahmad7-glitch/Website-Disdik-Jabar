@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal SPMB 2025 - Dinas Pendidikan Jawa Barat</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0066CC',
+                        secondary: '#00A859',
+                        lightblue: '#87CEEB'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.5s ease-in-out',
+                        'slide-down': 'slideDown 0.3s ease-in-out'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        slideDown: {
+                            '0%': { transform: 'translateY(-10px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <img src="assets/images/logo.png" alt="SPMB Disdik Jabar" class="h-12">
+                </div>
+                <div class="md:hidden relative z-50">
+                    <button type="button" class="mobile-menu-button p-2 rounded-lg bg-primary text-white hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white transition-colors">
+                        <span class="sr-only">Open menu</span>
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div class="mobile-menu hidden md:hidden fixed top-16 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-lg py-2 z-40 transform -translate-y-full transition-transform duration-300 ease-in-out">
+                <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors">
+                    <i class="fas fa-home mr-2"></i>Beranda
+                </a>
+                <a href="#about" class="block px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors">
+                    <i class="fas fa-info-circle mr-2"></i>Tentang
+                </a>
+                <a href="#contact" class="block px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors">
+                    <i class="fas fa-envelope mr-2"></i>Kontak
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="bg-pattern min-h-screen pt-16 pb-16 relative overflow-hidden">
+        <!-- Background Decorative Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
+            <div class="absolute top-1/2 -left-20 w-60 h-60 bg-white/10 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-20 right-1/4 w-52 h-52 bg-white/10 rounded-full blur-2xl"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="flex flex-col items-center justify-center min-h-[80vh] text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 animate-slide-up">
+                    Selamat datang di portal SPMB 2025!
+                </h1>
+                <p class="text-xl md:text-2xl text-white mb-8 max-w-3xl animate-slide-up" style="animation-delay: 200ms;">
+                    Ayo berpartisipasi dalam survei minat murid SMP/MTs tingkat IX ke SMA/SMK.
+                </p>
+                <a href="#" class="bg-yellow-400 hover:bg-yellow-500 text-primary font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg animate-slide-up flex items-center gap-2 group" style="animation-delay: 400ms;">
+                    <span>Klik tautan untuk ikut serta!</span>
+                    <i class="fas fa-arrow-right transition-transform group-hover:translate-x-1"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Chat Bot Widget -->
+    <div class="chat-widget fixed bottom-4 left-4 z-50">
+        <div class="bg-white rounded-full p-4 shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 group">
+            <i class="fas fa-robot text-3xl text-primary group-hover:text-secondary transition-colors"></i>
+            <div class="chat-bubble hidden absolute -top-16 -right-2 bg-white rounded-lg p-3 shadow-lg whitespace-nowrap animate-fade-in">
+                <p class="text-sm font-medium">Chat bersama<br>Dibo yuk! 👋</p>
+                <div class="absolute -bottom-2 right-5 w-3 h-3 bg-white transform rotate-45"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Address -->
+                <div class="animate-fade-in" style="animation-delay: 100ms;">
+                    <img src="assets/images/logo.png" alt="SPMB Disdik Jabar" class="h-16 mb-6">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Alamat</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Jl. Dr. Rajiman No.6, Pasir Kaliki,<br>
+                        Kec. Cicendo, Kota Bandung,<br>
+                        Jawa Barat
+                    </p>
+                </div>
+                <!-- Social Media -->
+                <div class="animate-fade-in" style="animation-delay: 200ms;">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-6">Media Sosial</h3>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-primary hover:text-secondary transition-all duration-300 transform hover:scale-110">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-primary hover:text-secondary transition-all duration-300 transform hover:scale-110">
+                            <i class="fab fa-youtube text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-primary hover:text-secondary transition-all duration-300 transform hover:scale-110">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-primary hover:text-secondary transition-all duration-300 transform hover:scale-110">
+                            <i class="fab fa-facebook text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-200 text-center">
+                <p class="text-gray-600">© Copyright 2025 Dinas Pendidikan Jawa Barat</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>
